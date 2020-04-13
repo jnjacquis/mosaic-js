@@ -1,0 +1,23 @@
+{
+  "name": "mosaic-js",
+  "version": "1.0.0",
+  "description": "Simple JS graphic library to generate image with basic shape pattern",
+  "main": "index.js",
+  "scripts": {
+    "build": "",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-webnode"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jnjacquis/mosaic-js.git"
+  },
+  "keywords": [
+    "graphic", "image", "mosaic", "grid", "pattern", "shape"
+  ],
+  "author": "Jean-Noel Jacquis",
+  "license": "ISC",
+  "dependencies": {
+    "http-webnode": "^1.0.1"
+  }
+}
