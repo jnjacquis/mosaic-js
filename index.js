@@ -31,16 +31,20 @@ console.log(randomColor(colorSchemeRed));
 
 var canvasTriangle = document.getElementById('canvas-triangle');
 var ctxTriangle = canvasTriangle.getContext("2d");
-drawFilledTriangle(ctxTriangle, 150, 150, 100, 100, 'blue', -90 * Math.PI / 180);
+drawFilledTriangle(ctxTriangle, 10, 10, 100, 100, 'red', 90 * Math.PI / 180);
 
-var canvasGridTriangle = document.getElementById('canvas-grid-triangle');
-var ctxGridTriangle = canvasGridTriangle.getContext("2d");
-drawGridWithTriangle(ctxGridTriangle, 4, 4, 0, 0, colorSchemeRed, notPrevious, 0);
+var canvasGridTriangleHorizontal = document.getElementById('canvas-grid-triangle-horizontal');
+var ctxGridTriangleHorizontal = canvasGridTriangleHorizontal.getContext("2d");
+drawGridWithTriangle(ctxGridTriangleHorizontal, 40, 40, colorSchemeRed, notPrevious, 90 * Math.PI / 180);
+
+var canvasGridTriangleVertical = document.getElementById('canvas-grid-triangle-vertical');
+var ctxGridTriangleVertical = canvasGridTriangleVertical.getContext("2d");
+drawGridWithTriangle(ctxGridTriangleVertical, 40, 40, colorSchemeRed, notPrevious, 0);
 
 var canvasGridSquareHorizontal = document.getElementById('canvas-grid-square-horizontal');
 var ctxGridSquareHorizontal = canvasGridSquareHorizontal.getContext("2d");
-drawGridWithSquare(ctxGridSquareHorizontal, 40, 40, colorSchemeRed, 0);
+drawGridWithSquare(ctxGridSquareHorizontal, 40, 40, colorSchemeRed, notPrevious, 0);
 
 var canvasGridSquareRotated = document.getElementById('canvas-grid-square-rotated-45');
 var ctxGridSquareRotated = canvasGridSquareRotated.getContext("2d");
-drawGridWithSquare(ctxGridSquareRotated, 40, 56, colorSchemeRed, 45 * Math.PI / 180);
+drawGridWithSquare(ctxGridSquareRotated, 40, 56, colorSchemeRed, notPrevious, 45 * Math.PI / 180);
