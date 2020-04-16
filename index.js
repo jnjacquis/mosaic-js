@@ -1,4 +1,4 @@
-import { drawFilledTriangle, drawGridWithTriangle, drawGridWithSquare } from './lib/mosaic.js';
+import { drawFilledTriangle, drawGridWithTriangle, drawGridWithSquare, drawFilledHexagon, drawGridWithHexagon } from './lib/mosaic.js';
 
 let colorSchemeRed = [
     'hsl(0, 100%, 95%)',
@@ -31,7 +31,7 @@ console.log(randomColor(colorSchemeRed));
 
 var canvasTriangle = document.getElementById('canvas-triangle');
 var ctxTriangle = canvasTriangle.getContext("2d");
-drawFilledTriangle(ctxTriangle, 10, 10, 100, 100, 'red', 90 * Math.PI / 180);
+drawFilledHexagon(ctxTriangle, 40, 60, 32, 'red', 90 * Math.PI / 180);
 
 var canvasGridTriangleHorizontal = document.getElementById('canvas-grid-triangle-horizontal');
 var ctxGridTriangleHorizontal = canvasGridTriangleHorizontal.getContext("2d");
@@ -48,3 +48,7 @@ drawGridWithSquare(ctxGridSquareHorizontal, 40, 40, colorSchemeRed, notPrevious,
 var canvasGridSquareRotated = document.getElementById('canvas-grid-square-rotated-45');
 var ctxGridSquareRotated = canvasGridSquareRotated.getContext("2d");
 drawGridWithSquare(ctxGridSquareRotated, 40, 56, colorSchemeRed, notPrevious, 45 * Math.PI / 180);
+
+var canvasGridHexagonHorizontal = document.getElementById('canvas-grid-hexagon-horizontal');
+var ctxGridHexagonHorizontal = canvasGridHexagonHorizontal.getContext("2d");
+drawGridWithHexagon(ctxGridHexagonHorizontal, 28, 24, colorSchemeRed, notPrevious, 0);
